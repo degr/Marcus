@@ -31,9 +31,9 @@ public class Context {
         }
         List<String> names = list.stream().map(v -> v.key).collect(Collectors.toList());
         List<String> compatibleNames = StringSorter.findCompatible(names, name);
-        for(String comatible : compatibleNames) {
+        for(String compatible : compatibleNames) {
             for(Pair<String, Object> item : list) {
-                if(item.key.equals(comatible)) {
+                if(item.key.equals(compatible)) {
                     return (T)item.item;
                 }
             }
